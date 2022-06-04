@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Costum Body */
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-50;
+  }
+  header {
+    @apply fixed top-0 z-10 flex w-full items-center justify-between px-4 py-4 lg:px-12 lg:py-4 transition-all;
+  }
+}
+
+/* Costum  className */
+@layer components {
+  .navLink {
+    @apply cursor-pointer text-sm font-light text-gray-300 transition duration-300 hover:text-white;
+  }
+}
