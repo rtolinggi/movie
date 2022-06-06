@@ -1,11 +1,10 @@
-import { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import Banner from "~/components/Banner";
 import Layout from "~/components/Layouts";
 import Row from "~/components/Row";
 import { getMovie } from "~/utils/getData.server";
-import { Movies } from "~/utils/getData.server";
-import { baseImageUrl } from "~/utils/request";
+import type { Movies } from "~/utils/getData.server";
 
 export const loader: LoaderFunction = async () => {
   return await getMovie();
@@ -24,10 +23,10 @@ export default function Index() {
   } = useLoaderData<Movies>();
   return (
     <Layout>
-      <div>
+      <div className='overflow-hidden'>
         {/* Banner */}
         <Banner netflixOriginals={netflixOriginals} />
-        <section className="relative flex flex-col space-y-10 justify-center items-start mx-auto px-4 overflow-y-hidden overflow-x-hidden ">
+        <section className='py-6'>
           {/* Row */}
           <Row title={"Lagi Viral"} movies={trendingNow} />
           <Row title={"Ranking Teratas"} movies={topRated} />
