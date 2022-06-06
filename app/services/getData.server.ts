@@ -1,4 +1,4 @@
-import requests from "./request";
+import requests from "../utils/request";
 
 export type Movie = {
   title: string;
