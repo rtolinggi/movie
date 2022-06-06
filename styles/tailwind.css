@@ -5,7 +5,7 @@
 /* Costum Body */
 @layer base {
   body {
-    @apply bg-slate-900 text-slate-50;
+    @apply bg-slate-900 text-slate-50 !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-rose-600;
   }
   header {
     @apply fixed top-0 z-10 flex w-full items-center justify-between px-4 py-4 lg:px-12 lg:py-4 transition-all;
@@ -16,18 +16,5 @@
 @layer components {
   .navLink {
     @apply cursor-pointer text-sm font-light text-gray-300 transition duration-300 hover:text-white;
-  }
-}
-
-/* Hide Scroll bar */
-@layer utilities {
-  /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
   }
 }
